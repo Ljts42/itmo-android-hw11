@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">dopochki</string>
+    <string name="prev" translatable="false" />
+    <string name="result" translatable="false">0</string>
+    <string name="dot">.</string>
+    <string name="clear" translatable="false">C</string>
+    <string name="backspace" translatable="false"><node>&#x232B;</node></string>
+    <string name="copy" translatable="false"><node>&#x2398;</node></string>
+    <string name="div" translatable="false">/</string>
+    <string name="mul" translatable="false">*</string>
+    <string name="sub" translatable="false">-</string>
+    <string name="add" translatable="false">+</string>
+    <string name="equal" translatable="false">=</string>
+    <string name="num0" translatable="false">0</string>
+    <string name="num1" translatable="false">1</string>
+    <string name="num2" translatable="false">2</string>
+    <string name="num3" translatable="false">3</string>
+    <string name="num4" translatable="false">4</string>
+    <string name="num5" translatable="false">5</string>
+    <string name="num6" translatable="false">6</string>
+    <string name="num7" translatable="false">7</string>
+    <string name="num8" translatable="false">8</string>
+    <string name="num9" translatable="false">9</string>
+</resources>

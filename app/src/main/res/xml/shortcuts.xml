@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/ic_window_round">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.github.ljts42.dopochki"
+            android:targetClass="com.github.ljts42.dopochki.WindowActivity"/>
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_launcher_foreground">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.github.ljts42.dopochki"
+            android:targetClass="com.github.ljts42.dopochki.MainActivity"/>
+    </shortcut>
+</shortcuts>

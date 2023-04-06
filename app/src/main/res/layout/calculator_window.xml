@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="180dp"
+    android:theme="@style/Theme.dopochki"
+    android:background="?colorOnPrimary">
+
+    <ImageView
+        android:id="@+id/close_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/space_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/space">
+
+        <TextView
+            android:id="@+id/prevText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prev"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/small_text_size" />
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollView">
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/result"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/normal_text_size" />
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Theme.dopochki.small_button"
+        app:cornerRadius="@dimen/corner_radius"
+        android:text="@string/clear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonDel"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@id/button7"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/buttonDel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Theme.dopochki.small_button"
+        app:cornerRadius="@dimen/corner_radius"
+        android:text="@string/backspace"
+        app:layout_constraintStart_toEndOf="@id/buttonClear"
+        app:layout_constraintEnd_toStartOf="@id/buttonCopy"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@id/button7"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/buttonCopy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/copy"
+        style="@style/Theme.dopochki.small_button"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintStart_toEndOf="@id/buttonDel"
+        app:layout_constraintEnd_toStartOf="@id/buttonDiv"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@id/button7"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/buttonDiv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/div"
+        style="@style/Theme.dopochki.small_button"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintStart_toEndOf="@id/buttonCopy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/scrollView2"
+        app:layout_constraintBottom_toTopOf="@id/button7"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/num7"
+        style="@style/Theme.dopochki.small_button"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button8"
+        app:layout_constraintTop_toBottomOf="@id/buttonClear"
+        app:layout_constraintBottom_toTopOf="@id/button4"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/num8"
+        style="@style/Theme.dopochki.small_button"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintStart_toEndOf="@id/button7"
+        app:layout_constraintEnd_toStartOf="@id/button9"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/buttonClear"
+        app:layout_constraintBottom_toTopOf="@id/button4"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/num9"
+        style="@style/Theme.dopochki.small_button"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintStart_toEndOf="@id/button8"
+        app:layout_constraintEnd_toStartOf="@id/buttonMul"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/buttonClear"
+        app:layout_constraintBottom_toTopOf="@id/button4"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/buttonMul"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/mul"
+        style="@style/Theme.dopochki.small_button"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintStart_toEndOf="@id/button9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/buttonClear"
+        app:layout_constraintBottom_toTopOf="@id/button4"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/num4"
+        style="@style/Theme.dopochki.small_button"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/button7"
+        app:layout_constraintBottom_toTopOf="@id/button1"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/num5"
+        style="@style/Theme.dopochki.small_button"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintStart_toEndOf="@id/button4"
+        app:layout_constraintEnd_toStartOf="@id/button6"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/button7"
+        app:layout_constraintBottom_toTopOf="@id/button1"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/num6"
+        style="@style/Theme.dopochki.small_button"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintStart_toEndOf="@id/button5"
+        app:layout_constraintEnd_toStartOf="@id/buttonSub"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/button7"
+        app:layout_constraintBottom_toTopOf="@id/button1"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/buttonSub"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sub"
+        style="@style/Theme.dopochki.small_button"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintStart_toEndOf="@id/button6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/button7"
+        app:layout_constraintBottom_toTopOf="@id/button1"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/num1"
+        style="@style/Theme.dopochki.small_button"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/button2"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/button4"
+        app:layout_constraintBottom_toTopOf="@id/button0"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/num2"
+        style="@style/Theme.dopochki.small_button"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintStart_toEndOf="@id/button1"
+        app:layout_constraintEnd_toStartOf="@id/button3"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/button4"
+        app:layout_constraintBottom_toTopOf="@id/button0"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/num3"
+        style="@style/Theme.dopochki.small_button"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintStart_toEndOf="@id/button2"
+        app:layout_constraintEnd_toStartOf="@id/buttonAdd"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/button4"
+        app:layout_constraintBottom_toTopOf="@id/button0"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/add"
+        style="@style/Theme.dopochki.small_button"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintStart_toEndOf="@id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/button4"
+        app:layout_constraintBottom_toTopOf="@id/button0"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/button0"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/num0"
+        style="@style/Theme.dopochki.small_button"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonDot"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/button1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/buttonDot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/dot"
+        style="@style/Theme.dopochki.small_button"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintStart_toEndOf="@id/button0"
+        app:layout_constraintEnd_toStartOf="@id/buttonEq"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/button1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Button
+        android:id="@+id/buttonEq"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/equal"
+        style="@style/Theme.dopochki.small_button"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintStart_toEndOf="@id/buttonDot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/button1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
